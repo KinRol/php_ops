@@ -1,0 +1,21 @@
+<html>
+<head>
+	<META http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>
+		用户列表
+	</title>
+</head>
+<body>
+	<!-- 修改用户的表单 -->
+	<Volist name="list" id="vo">
+		<form action="__URL__/doUpdate?id={$vo.userId}" method="post">
+			用  户  名：<input type="text" name="userName" value="{$vo.userName}" /><br/><br/>            <!-- 用户名 -->
+			用户密码：<input type="text" name="userPwd" value="{$vo.userPwd}" /><br/><br/>	              <!-- 密码 -->
+			用户状态：<input type="text" name="isLock" value="{$vo.isLock}" /><br/><br/>	              <!-- 状态 -->
+			所属群组：<input type="text" name="groupId" value="{$vo.groupId}" /><br/><br/>               <!-- 所属的用户组 -->
+			所属部门：<input type="text" name="deptId" value="{$vo.deptId}" /><br/><br/>		          <!-- 所属的部门 -->
+			<input type="submit" value="修改用户" />
+		</form>
+	</Volist>
+</body>
+</html>

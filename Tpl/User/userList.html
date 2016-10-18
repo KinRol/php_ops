@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>用户列表</title>
+</head>
+<body>
+<center>
+	<table border="1px" cellpadding="0" cellspacing="0" width="500px">
+		<tr><th align="center">ID</th><th align="center">用户名</th><th align="center">状态</th><th align="center">用户组</th><th align="center">部门</th><th colspan="2"></th></tr>
+		<volist name="list" id="vo">
+		<tr>
+			<td align="center">{$vo.userId}</td><td align="center">{$vo.userName}</td><td align="center">{$vo.isLock}</td><td align="center">{$vo.groupId}</td><td align="center">{$vo.deptId}</td>
+			<td align="center"><a href="__URL__/updateUser?id={$vo.userId}">修改</a></td>
+			<td align="center"><a href="__URL__/delUser?id={$vo.userId}" onclick="return confirm('你确定要删除这个用户吗？')">删除</a></td>
+		</tr>
+		</volist>
+	</table>
+</center>
+</body>
+</html>
